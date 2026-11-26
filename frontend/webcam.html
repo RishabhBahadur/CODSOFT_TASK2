@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FaceMatrix | Live Webcam</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app-layout">
+
+    <aside class="sidebar">
+        <h2 class="logo">Face<span>Matrix</span></h2>
+        <p class="menu-heading">MAIN MENU</p>
+
+        <nav>
+            <a href="index.html">🏠 Dashboard</a>
+            <a href="image.html">🖼️ Image Processing</a>
+            <a href="webcam.html" class="active">📷 Live Webcam</a>
+            <a href="video.html">🎬 Video Processing</a>
+            <a href="recognition.html">👤 Face Recognition</a>
+            <a href="about.html">ℹ️ About Project</a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <p>AI Powered System</p>
+            <small>FaceMatrix v1.0</small>
+        </div>
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <h1>Live Webcam</h1>
+                <p>Real-time face detection through your camera.</p>
+            </div>
+            <div class="status-badge">● System Online</div>
+        </header>
+
+        <section class="page-section">
+
+            <h2 class="page-title">Real-Time Face Detection</h2>
+
+            <p class="page-description">
+                Start your webcam and FaceMatrix will automatically
+                detect and highlight faces in the camera feed.
+            </p>
+
+            <div class="webcam-container">
+
+                <video id="webcam" autoplay playsinline muted></video>
+
+                <canvas id="webcamCanvas"></canvas>
+
+            </div>
+
+            <div class="webcam-controls">
+
+                <button id="startWebcam" class="primary-btn">
+                    Start Webcam
+                </button>
+
+                <button id="stopWebcam" class="primary-btn" disabled>
+                    Stop Webcam
+                </button>
+
+            </div>
+
+            <div id="webcamStatus" class="result-status">
+                Webcam is currently stopped.
+            </div>
+
+            <div class="result-count">
+                Faces Detected: <span id="webcamFaceCount">0</span>
+            </div>
+
+        </section>
+
+        <footer class="dashboard-footer">
+            FaceMatrix © 2026 | Live Webcam Module
+        </footer>
+
+    </main>
+</div>
+
+<script src="webcam.js"></script>
+</body>
+</html>

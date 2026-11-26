@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FaceMatrix | Face Recognition</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app-layout">
+
+    <aside class="sidebar">
+        <h2 class="logo">Face<span>Matrix</span></h2>
+        <p class="menu-heading">MAIN MENU</p>
+
+        <nav>
+            <a href="index.html">🏠 Dashboard</a>
+            <a href="image.html">🖼️ Image Processing</a>
+            <a href="webcam.html">📷 Live Webcam</a>
+            <a href="video.html">🎬 Video Processing</a>
+            <a href="recognition.html" class="active">👤 Face Recognition</a>
+            <a href="about.html">ℹ️ About Project</a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <p>AI Powered System</p>
+            <small>FaceMatrix v1.0</small>
+        </div>
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <h1>Face Recognition</h1>
+                <p>Register and recognize faces using computer vision.</p>
+            </div>
+            <div class="status-badge">● System Online</div>
+        </header>
+
+        <section class="page-section">
+
+            <h2 class="page-title">Face Recognition System</h2>
+
+            <p class="page-description">
+                Register consenting individuals and compare new images
+                against the registered face database.
+            </p>
+
+            <div class="recognition-grid">
+
+                <!-- REGISTER FACE -->
+
+                <div class="recognition-card">
+
+                    <div class="feature-icon">👤</div>
+
+                    <h3>Register New Face</h3>
+
+                    <p>
+                        Add a person's name and face image
+                        to the recognition database.
+                    </p>
+
+                    <label for="personName">Person's Name</label>
+
+                    <input
+                        type="text"
+                        id="personName"
+                        placeholder="Enter person's name"
+                    >
+
+                    <label for="registerImage">Upload Face Image</label>
+
+                    <input
+                        type="file"
+                        id="registerImage"
+                        accept="image/*"
+                    >
+
+                    <button id="registerFace" class="primary-btn">
+                        Register Face
+                    </button>
+
+                    <div id="registerStatus" class="result-status"></div>
+
+                </div>
+
+                <!-- RECOGNIZE FACE -->
+
+                <div class="recognition-card">
+
+                    <div class="feature-icon">🔍</div>
+
+                    <h3>Recognize Face</h3>
+
+                    <p>
+                        Upload an image to check whether a
+                        registered person can be recognized.
+                    </p>
+
+                    <label for="recognizeImage">Upload Image</label>
+
+                    <input
+                        type="file"
+                        id="recognizeImage"
+                        accept="image/*"
+                    >
+
+                    <button id="recognizeFace" class="primary-btn">
+                        Recognize Face
+                    </button>
+
+                    <div id="recognizeStatus" class="result-status"></div>
+
+                    <div id="recognitionResult" style="display:none;">
+
+                        <h4>Recognition Result</h4>
+
+                        <p>
+                            Person:
+                            <strong id="recognizedName">Unknown</strong>
+                        </p>
+
+                        <p>
+                            Confidence:
+                            <strong id="recognitionConfidence">-</strong>
+                        </p>
+
+                        <img id="recognizedImage" alt="Recognition result">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="page-section">
+                <h3>Important Privacy Notice</h3>
+                <p class="page-description">
+                    Only register or process facial images with the
+                    individual's informed consent. Registered face
+                    data should be stored and handled securely.
+                </p>
+            </div>
+
+        </section>
+
+        <footer class="dashboard-footer">
+            FaceMatrix © 2026 | Face Recognition Module
+        </footer>
+
+    </main>
+</div>
+
+<script src="recognition.js"></script>
+</body>
+</html>

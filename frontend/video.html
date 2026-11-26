@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FaceMatrix | Video Processing</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app-layout">
+
+    <aside class="sidebar">
+        <h2 class="logo">Face<span>Matrix</span></h2>
+        <p class="menu-heading">MAIN MENU</p>
+
+        <nav>
+            <a href="index.html">🏠 Dashboard</a>
+            <a href="image.html">🖼️ Image Processing</a>
+            <a href="webcam.html">📷 Live Webcam</a>
+            <a href="video.html" class="active">🎬 Video Processing</a>
+            <a href="recognition.html">👤 Face Recognition</a>
+            <a href="about.html">ℹ️ About Project</a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <p>AI Powered System</p>
+            <small>FaceMatrix v1.0</small>
+        </div>
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <h1>Video Processing</h1>
+                <p>Upload and analyze videos for face detection.</p>
+            </div>
+            <div class="status-badge">● System Online</div>
+        </header>
+
+        <section class="page-section">
+
+            <h2 class="page-title">Video Face Detection</h2>
+
+            <p class="page-description">
+                Upload a video and let FaceMatrix process its frames
+                to identify and highlight detected faces.
+            </p>
+
+            <div class="upload-area">
+
+                <div class="feature-icon">🎬</div>
+
+                <h3>Upload Your Video</h3>
+
+                <p>Select an MP4, AVI, MOV or MKV video.</p>
+
+                <input
+                    type="file"
+                    id="videoInput"
+                    accept="video/mp4,video/avi,video/quicktime,video/x-matroska,.mkv,.avi,.mov,.mp4"
+                >
+
+                <button id="processVideo" class="primary-btn">
+                    Process Video
+                </button>
+
+            </div>
+
+            <div id="videoStatus" class="result-status"></div>
+
+            <div id="videoResult" class="result-section" style="display:none;">
+
+                <h3>Video Processing Results</h3>
+
+                <div class="result-count">
+                    Frames Processed:
+                    <span id="framesProcessed">0</span>
+                </div>
+
+                <div class="result-count">
+                    Total Face Detections:
+                    <span id="totalFaceDetections">0</span>
+                </div>
+
+                <video
+                    id="processedVideo"
+                    controls
+                    playsinline
+                ></video>
+
+                <a
+                    id="downloadVideo"
+                    class="primary-btn"
+                    download="facematrix-processed.mp4"
+                >
+                    Download Processed Video
+                </a>
+
+            </div>
+
+        </section>
+
+        <footer class="dashboard-footer">
+            FaceMatrix © 2026 | Video Processing Module
+        </footer>
+
+    </main>
+</div>
+
+<script src="video.js"></script>
+</body>
+</html>

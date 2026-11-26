@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FaceMatrix | Image Processing</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app-layout">
+
+    <aside class="sidebar">
+        <h2 class="logo">Face<span>Matrix</span></h2>
+        <p class="menu-heading">MAIN MENU</p>
+
+        <nav>
+            <a href="index.html">🏠 Dashboard</a>
+            <a href="image.html" class="active">🖼️ Image Processing</a>
+            <a href="webcam.html">📷 Live Webcam</a>
+            <a href="video.html">🎬 Video Processing</a>
+            <a href="recognition.html">👤 Face Recognition</a>
+            <a href="about.html">ℹ️ About Project</a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <p>AI Powered System</p>
+            <small>FaceMatrix v1.0</small>
+        </div>
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <h1>Image Processing</h1>
+                <p>Upload an image and detect human faces using AI.</p>
+            </div>
+            <div class="status-badge">● System Online</div>
+        </header>
+
+        <section class="page-section">
+            <h2 class="page-title">Image Face Detection</h2>
+            <p class="page-description">
+                Select an image from your device. FaceMatrix will analyze
+                the image and highlight detected faces.
+            </p>
+
+            <div class="upload-area">
+                <div class="feature-icon">🖼️</div>
+                <h3>Upload Your Image</h3>
+                <p>Choose an image file from your computer.</p>
+
+                <input type="file" id="imageInput" accept="image/*">
+
+                <button id="processImage" class="primary-btn">
+                    Detect Faces
+                </button>
+            </div>
+
+            <div id="imageStatus" class="result-status"></div>
+
+            <div id="imageResult" class="result-section" style="display:none;">
+                <h3>Detection Results</h3>
+
+                <div class="result-count">
+                    Faces Detected: <span id="faceCount">0</span>
+                </div>
+
+                <img id="processedImage" alt="Processed image">
+
+                <a id="downloadImage" class="primary-btn" download="facematrix-result.jpg">
+                    Download Processed Image
+                </a>
+            </div>
+        </section>
+
+        <footer class="dashboard-footer">
+            FaceMatrix © 2026 | Image Processing Module
+        </footer>
+
+    </main>
+</div>
+
+<script src="image.js"></script>
+</body>
+</html>

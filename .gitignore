@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+venv/
+.venv/
+env/
+ENV/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Runtime uploads and generated outputs
+uploads/*
+!uploads/.gitkeep
+outputs/*
+!outputs/.gitkeep
+recognition_data/
+
+# Model/data files that should not be committed by default
+# Review before adding large or private datasets/models.
+Dataset/
+datasets/
+*.h5
+*.keras
+*.pt
+*.pth
+*.onnx
+
+# Editor / OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+test.jpg
+
+test.jpg
